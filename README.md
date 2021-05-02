@@ -1,6 +1,7 @@
 # intel-sgx
 
 #manjaro
+
 1. Update auf Kernel 5.12
 2. Download driver 2.11 and sdk von https://download.01.org/intel-sgx/sgx-linux/2.13/distro/ubuntu20.04-server/
 3. Beide installieren
