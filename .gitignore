@@ -1,0 +1,134 @@
+
+# Created by https://www.toptal.com/developers/gitignore/api/eclipse,c++
+# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,c++
+
+### C++ ###
+# Prerequisites
+*.d
+
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.obj
+
+# Precompiled Headers
+*.gch
+*.pch
+
+# Linker files
+*.ilk
+
+# Debugger Files
+*.pdb
+
+# Compiled Dynamic libraries
+*.so
+*.dylib
+*.dll
+
+# Fortran module files
+*.mod
+*.smod
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+*.lib
+
+# Executables
+*.exe
+*.out
+*.app
+
+### Eclipse ###
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
+
+# PyDev specific (Python IDE for Eclipse)
+*.pydevproject
+
+# CDT-specific (C/C++ Development Tooling)
+.cproject
+.project
+
+# CDT- autotools
+.autotools
+
+# Java annotation processor (APT)
+.factorypath
+
+# PDT-specific (PHP Development Tools)
+.buildpath
+
+# sbteclipse plugin
+.target
+
+# Tern plugin
+.tern-project
+
+# TeXlipse plugin
+.texlipse
+
+# STS (Spring Tool Suite)
+.springBeans
+
+# Code Recommenders
+.recommenders/
+
+# Annotation Processing
+.apt_generated/
+.apt_generated_test/
+
+# Scala IDE specific (Scala & Java development for Eclipse)
+.cache-main
+.scala_dependencies
+.worksheet
+
+# Uncomment this line if you wish to ignore the project description file.
+# Typically, this file would be tracked if it contains build/dependency configurations:
+#.project
+
+### Eclipse Patch ###
+# Spring Boot Tooling
+.sts4-cache/
+
+# End of https://www.toptal.com/developers/gitignore/api/eclipse,c++
+
+
+### Intel SGX ###
+# generated files
+*_u.*
+*_t.*
+
+# app binary
+app
+
+# config file
+.config_SIM_DEBUG_x64
+
+#*/*           #ignore all files in each directory
+#!*/*.cpp      #unignore .c files in each directory
+#!*/*.h        #unignore .h header files in each directory
+#!*/*.edl      #unignore .edl files in each directory
+#!*/*.pem      #unignore .h header files in each directory
+#!*/*.xml      #unignore .h header files in each directory
+#!*/*.lds      #unignore .h header files in each directory
+#!.gitignore   #unignore .gitignore
+#!Makefile     #unignore Makefile
