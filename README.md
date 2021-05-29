@@ -5,6 +5,7 @@ This documentation is a quick installation guide to run Intel(R) Software Guard 
 
 ### Prerequisites
 To install the Intel® SGX PSW, first install the following tools: 
+
 ``$ sudo apt-get install libssl-dev libcurl4-openssl-dev libprotobuf-dev``
 
 To install the Intel® SGX SDK, install the following tools:
@@ -27,8 +28,8 @@ Add the following repository to your sources:
 ``$ echo 'deb [arch=amd64] https://download.01.org/intel-sgx/sgx_repo/ubuntu focal main' | sudo tee /etc/apt/sources.list.d/intel-sgx.list``
 
 Add the key to the list of trusted keys used by the apt to authenticate packages:
-``$ wget https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key
-$ sudo apt-key add intel-sgx-deb.key``
+``$ wget https://download.01.org/intel-sgx/sgx_repo/ubuntu/intel-sgx-deb.key``
+``$ sudo apt-key add intel-sgx-deb.key``
 
 Update the apt and install the packages:
 ``$ sudo apt-get update``
