@@ -83,7 +83,7 @@ Intel delivers a plugin for enclave developers, which uses the Eclipse IDE. It s
 
 ### Prerequisites
 * Eclipse 
-** Use the C/C++ package, which can be found [here](https://www.eclipse.org/downloads/packages/)
+  * Use the C/C++ package, which can be found [here](https://www.eclipse.org/downloads/packages/)
 * OpenSSL
 * Intel SGX SDK for Linux OS
 
@@ -108,9 +108,10 @@ Intel delivers a plugin for enclave developers, which uses the Eclipse IDE. It s
 
 If you get an error message like `error while loading shared libraries: libsgx_urts_sim.so: cannot open shared object file: No such file or directory` you have to do the following steps:
 * Edit the configuration of executable
-** The little gear icon next to the name of your application
+  * The little gear icon next to the name of your application
 * Open the tab Environment
-* Add the variable LD_LIBRARY_PATH and the value pointing to your sdk_libs e.g. /opt/intel/sgxsdk/sdk_libs
+* Add the variable `LD_LIBRARY_PATH` and the value pointing to your sdk_libs e.g. `/opt/intel/sgxsdk/sdk_libs`
 
-Run the application again and you will see in the console the name of your enclave name and the output `Application ran with success`
+Run the application again and you will see in the console the name of your enclave name and the output `Application ran with success`.
+If you need further information checkout the Help → Help Contents pages. There are more detailed information about the Intel(R) SGX Eclipse Plugin.
 
