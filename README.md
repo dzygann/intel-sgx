@@ -74,3 +74,43 @@ Run the following command:
 6. `source /opt/intel/sgxsdk/environment`
 7. `make SGX_MODE=SIM`
 8. `./app`
+
+
+
+
+## Install Eclipse Plugin
+Intel delivers a plugin for enclave developers, which uses the Eclipse IDE. It supports developers to maintain SGX code. This guide shows you how to install the plugin and how to create a SGX Hello World application with this plugin.
+
+### Prerequisites
+* Eclipse 
+** Use the C/C++ package, which can be found found [here](https://www.eclipse.org/downloads/packages/)
+* OpenSSL
+* Intel SGX SDK for Linux OS
+
+### Install Plugin
+* Download the plugin from [Intel](https://01.org/intel-software-guard-extensions/downloads)
+* Open Eclipse and go to Help menu → Install New Software ... on the menu bar.
+* The install dialog appears. Click the Add ... button to open the Add Repository dialog
+* Add a meaningful name like Intel SGX Eclipse Plugin and click on the Archive ... button
+* Select the previously downloaded plugin and hit open and click Add
+* In the install dialog select the plugin and install the plugin 
+
+### Create Hello World 
+* Go to File → New → Other...
+* The project wizard appears. Select the C++ Project inside the C/C++ projects with Intel(R) SGX Enabled folder
+* Hit next and set a project name and select Empty Project (default value) in the project type list
+* Go through the wizard until the Finish button is enabled
+* Open the context menu by clicking on the project with the right mouse button and go to Intel(R) Software Guard Extensions Tools → Add Intel(R) SGX Enclave
+* Add the enclave name and hit OK on the appearing dialog
+* A new folder is created with a full working skelton of SGX
+* You can build it by using the hammer icon in the toolbar. 
+* To run the application click on your project and select Run As → Local C/C++ Application
+
+If you get a error message like `error while loading shared libraries: libsgx_urts_sim.so: cannot open shared object file: No such file or directory` you have to do the following steps:
+* Edit the configuration of executable
+** The little gear icon next to name of your application
+* Open the tab Environment
+* Add the variable LD_LIBRARY_PATH and the value pointing to your sdk_libs e.g. /opt/intel/sgxsdk/sdk_libs
+
+Run the application again and you will see in the console the name of your enclave name and the output `Application ran with success`
+
