@@ -79,11 +79,11 @@ Run the following command:
 
 
 ## Install Eclipse Plugin
-Intel delivers a plugin for enclave developers, which uses the Eclipse IDE. It supports developers to maintain SGX code. This guide shows you how to install the plugin and how to create a SGX Hello World application with this plugin.
+Intel delivers a plugin for enclave developers, which uses the Eclipse IDE. It supports developers to maintain SGX code. This guide shows you how to install the plugin and how to create an SGX Hello World application with this plugin.
 
 ### Prerequisites
 * Eclipse 
-** Use the C/C++ package, which can be found found [here](https://www.eclipse.org/downloads/packages/)
+** Use the C/C++ package, which can be found [here](https://www.eclipse.org/downloads/packages/)
 * OpenSSL
 * Intel SGX SDK for Linux OS
 
@@ -102,13 +102,13 @@ Intel delivers a plugin for enclave developers, which uses the Eclipse IDE. It s
 * Go through the wizard until the Finish button is enabled
 * Open the context menu by clicking on the project with the right mouse button and go to Intel(R) Software Guard Extensions Tools → Add Intel(R) SGX Enclave
 * Add the enclave name and hit OK on the appearing dialog
-* A new folder is created with a full working skelton of SGX
+* A new folder is created with a full working skeleton of SGX
 * You can build it by using the hammer icon in the toolbar. 
 * To run the application click on your project and select Run As → Local C/C++ Application
 
-If you get a error message like `error while loading shared libraries: libsgx_urts_sim.so: cannot open shared object file: No such file or directory` you have to do the following steps:
+If you get an error message like `error while loading shared libraries: libsgx_urts_sim.so: cannot open shared object file: No such file or directory` you have to do the following steps:
 * Edit the configuration of executable
-** The little gear icon next to name of your application
+** The little gear icon next to the name of your application
 * Open the tab Environment
 * Add the variable LD_LIBRARY_PATH and the value pointing to your sdk_libs e.g. /opt/intel/sgxsdk/sdk_libs
 
