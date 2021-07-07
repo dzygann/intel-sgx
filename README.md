@@ -3,6 +3,15 @@
 ## Ubuntu 20.04 LTS 64-bit Desktop
 This documentation is a quick installation guide to run Intel(R) Software Guard Extensions on Ubuntu 20.04 LTS 64-bit Desktop with disabled Flexible Launch Control (FLC) support.
 
+### FLC
+To check if you processor supports FLC you can run the following command
+
+``` $ cpuid | grep -i sgx```
+
+If you can find an output like `SGX_LC: SGX launch config supported = true` then your processor supports FLC, otherwise not.
+If yor processer supports FLC it means also, that your processor supports DCAP.
+
+
 ### Prerequisites
 To install the Intel® SGX PSW, first install the following tools: 
 
@@ -12,8 +21,8 @@ To install the Intel® SGX SDK, install the following tools:
 ``$ sudo apt-get install build-essential python-is-python3``
 
 ### Install Intel® SGX Driver Installation
-Download the DCAP driver from https://01.org/intel-software-guard-extensions/downloads 
-You can find the DCAP version in the `driver_readme.txt` file. 
+Download the non DCAP driver from https://01.org/intel-software-guard-extensions/downloads 
+You can find the non DCAP version in the `driver_readme.txt` file. 
 
 Set the protections to allow for the .bin file execution:
 ``$ chmod 777 sgx_linux_x64_driver_<version>.bin``
